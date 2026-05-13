@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Smart Notes (JavaFX)",
+            "request": "launch",
+            "mainClass": "com.notesapp.MainApp",
+            "projectName": "smart-notes",
+            "vmArgs": "--module-path \"${userHome}/.m2/repository/org/openjfx/javafx-controls/21.0.2/javafx-controls-21.0.2-win.jar${pathSeparator}${userHome}/.m2/repository/org/openjfx/javafx-fxml/21.0.2/javafx-fxml-21.0.2-win.jar${pathSeparator}${userHome}/.m2/repository/org/openjfx/javafx-base/21.0.2/javafx-base-21.0.2-win.jar${pathSeparator}${userHome}/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2-win.jar\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "shell",
+            "name": "Run via Maven (mvn javafx:run)",
+            "request": "launch",
+            "command": "mvn javafx:run",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

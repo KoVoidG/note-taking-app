@@ -1,0 +1,573 @@
+/* ============================================
+   Smart Notes - Premium Card UI Design
+   Features: Light/Dark Mode, Card Grid, Categories
+   ============================================ */
+
+/* ============================================
+   ROOT & GENERAL - LIGHT THEME (default)
+   ============================================ */
+.root {
+    -fx-background-color: #FAF8F5;
+    -fx-font-family: "Segoe UI", "SF Pro Display", -apple-system, sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* ============================================
+   ROOT & GENERAL - DARK THEME
+   ============================================ */
+.root.dark-mode {
+    -fx-background-color: #2D2D2D;
+}
+
+/* ============================================
+   TOP BAR
+   ============================================ */
+.top-bar {
+    -fx-background-color: #FAF8F5;
+    -fx-padding: 16 24 16 24;
+    -fx-border-color: #E8E2D8;
+    -fx-border-width: 0 0 1 0;
+}
+
+.dark-mode .top-bar {
+    -fx-background-color: #2D2D2D;
+    -fx-border-color: #404040;
+}
+
+/* Avatar */
+.avatar-circle {
+    -fx-fill: #667eea;
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 2;
+}
+
+.dark-mode .avatar-circle {
+    -fx-stroke: #404040;
+}
+
+.avatar-text {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* User name */
+.user-name {
+    -fx-text-fill: #222222;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.dark-mode .user-name {
+    -fx-text-fill: #EEEEEE;
+}
+
+/* All Notes title */
+.all-notes-title {
+    -fx-text-fill: #222222;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 30;
+}
+
+.dark-mode .all-notes-title {
+    -fx-text-fill: #EEEEEE;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #555555;
+    -fx-font-size: 18px;
+    -fx-padding: 8;
+    -fx-cursor: hand;
+    -fx-background-radius: 20;
+}
+
+.dark-mode .icon-button {
+    -fx-text-fill: #CCCCCC;
+}
+
+.icon-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode .icon-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    -fx-background-color: #AAAAAA;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 16 6 16;
+    -fx-background-radius: 14;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.theme-toggle:selected {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.theme-toggle:hover {
+    -fx-opacity: 0.85;
+}
+
+/* Add New Note button */
+.add-note-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 22 10 22;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.3), 6, 0, 0, 2);
+}
+
+.add-note-button:hover {
+    -fx-background-color: #1976D2;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 10, 0, 0, 4);
+}
+
+.add-note-button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+/* ============================================
+   SEARCH FIELD
+   ============================================ */
+.search-field {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #999999;
+    -fx-font-size: 13px;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 10;
+    -fx-border-color: #D0D0D0;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+.dark-mode .search-field {
+    -fx-background-color: #404040;
+    -fx-text-fill: #EEEEEE;
+    -fx-prompt-text-fill: #888888;
+    -fx-border-color: #555555;
+}
+
+.search-field:focused {
+    -fx-border-color: #2196F3;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.3), 6, 0, 0, 0);
+}
+
+/* ============================================
+   CATEGORY SIDEBAR
+   ============================================ */
+.category-sidebar {
+    -fx-background-color: #FAF8F5;
+    -fx-border-color: #E8E2D8;
+    -fx-border-width: 0 1 0 0;
+}
+
+.dark-mode .category-sidebar {
+    -fx-background-color: #2D2D2D;
+    -fx-border-color: #404040;
+}
+
+.category-row {
+    -fx-cursor: hand;
+    -fx-background-radius: 10;
+}
+
+.category-row:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.04);
+}
+
+.dark-mode .category-row:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+}
+
+.category-row-selected {
+    -fx-background-color: rgba(33, 150, 243, 0.12);
+    -fx-background-radius: 10;
+}
+
+.dark-mode .category-row-selected {
+    -fx-background-color: rgba(33, 150, 243, 0.2);
+}
+
+.category-name {
+    -fx-text-fill: #444444;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+.dark-mode .category-name {
+    -fx-text-fill: #CCCCCC;
+}
+
+.category-count {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* ============================================
+   NOTE GRID / SCROLL
+   ============================================ */
+.note-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.note-scroll>.viewport {
+    -fx-background-color: transparent;
+}
+
+.note-grid {
+    -fx-background-color: transparent;
+}
+
+/* ============================================
+   NOTE CARDS
+   ============================================ */
+.note-card {
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0, 0, 3);
+    -fx-cursor: hand;
+    -fx-min-height: 180;
+}
+
+.note-card:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.18), 14, 0, 0, 5);
+}
+
+/* Card title - dark mode default */
+.card-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1a1a;
+}
+
+.dark-mode .card-title {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Tag badge */
+.tag-badge {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+/* Card content preview */
+.card-content {
+    -fx-text-fill: #333333;
+    -fx-font-size: 12px;
+    -fx-line-spacing: 3;
+}
+
+.dark-mode .card-content {
+    -fx-text-fill: rgba(255, 255, 255, 0.85);
+}
+
+/* Card time/date */
+.card-time,
+.card-date {
+    -fx-text-fill: #444444;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.dark-mode .card-time,
+.dark-mode .card-date {
+    -fx-text-fill: rgba(255, 255, 255, 0.75);
+}
+
+/* ============================================
+   SCROLLBARS - MODERN MINIMAL
+   ============================================ */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 2;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #CCCCCC;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.dark-mode .scroll-bar .thumb {
+    -fx-background-color: #555555;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #2196F3;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 10;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-min-height: 40;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 10;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-min-width: 40;
+}
+
+/* ============================================
+   FOCUS INDICATORS
+   ============================================ */
+.button:focused,
+.toggle-button:focused,
+.list-view:focused,
+.text-field:focused {
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* ============================================
+   DIALOG - TITLE FIELD
+   Modern flat field with left accent border
+   ============================================ */
+.dialog-title-field {
+    -fx-control-inner-background: #F3F4F6;
+    -fx-background-color: #F3F4F6;
+    -fx-background-insets: 0;
+    -fx-text-fill: #1A1A2E;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 14 18;
+    -fx-background-radius: 0 10 10 0;
+    -fx-border-width: 0 0 0 4;
+    -fx-border-color: #667eea;
+    -fx-border-radius: 0 10 10 0;
+    -fx-prompt-text-fill: #B0B0C0;
+}
+
+.dialog-title-field:focused {
+    -fx-border-color: #764ba2;
+    -fx-effect: dropshadow(gaussian, rgba(102, 126, 234, 0.2), 10, 0, 0, 0);
+}
+
+.dialog-title-field-dark {
+    -fx-control-inner-background: #1A1A30;
+    -fx-background-color: #1A1A30;
+    -fx-text-fill: #E8E8F0;
+    -fx-border-color: #667eea;
+    -fx-prompt-text-fill: #555570;
+}
+
+.dialog-title-field-dark:focused {
+    -fx-border-color: #a78bfa;
+    -fx-effect: dropshadow(gaussian, rgba(167, 139, 250, 0.3), 10, 0, 0, 0);
+}
+
+/* ============================================
+   DIALOG - TAG COMBO BOX
+   Custom styled dropdown with accent arrow
+   ============================================ */
+.dialog-tag-combo {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 10;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.dialog-tag-combo .text-field {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10 0 0 10;
+    -fx-text-fill: #1A1A2E;
+    -fx-padding: 10 14;
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #9CA3AF;
+}
+
+.dialog-tag-combo .arrow-button {
+    -fx-background-color: linear-gradient(to bottom, #667eea, #764ba2);
+    -fx-background-radius: 0 10 10 0;
+    -fx-padding: 10 14;
+    -fx-cursor: hand;
+}
+
+.dialog-tag-combo .arrow-button .arrow {
+    -fx-background-color: white;
+    -fx-shape: "M 0 0 L 4 4 L 8 0 Z";
+}
+
+.dialog-tag-combo .list-cell {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #1A1A2E;
+    -fx-padding: 8 14;
+    -fx-font-size: 13px;
+}
+
+.dialog-tag-combo .list-cell:hover {
+    -fx-background-color: #E8E5FF;
+    -fx-text-fill: #4338CA;
+}
+
+.dialog-tag-combo .list-cell:selected {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+}
+
+.dialog-tag-combo-popup .list-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 12, 0, 0, 4);
+}
+
+.dialog-tag-combo-popup .list-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #1A1A2E;
+    -fx-padding: 10 16;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6;
+}
+
+.dialog-tag-combo-popup .list-cell:filled:hover {
+    -fx-background-color: #EEF2FF;
+    -fx-text-fill: #4338CA;
+}
+
+.dialog-tag-combo-popup .list-cell:filled:selected {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+}
+
+/* --- Dark mode variants --- */
+.dialog-tag-combo-dark {
+    -fx-background-color: #1A1A30;
+    -fx-background-radius: 10;
+}
+
+.dialog-tag-combo-dark .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E8E8F0;
+    -fx-prompt-text-fill: #555570;
+}
+
+.dialog-tag-combo-dark .arrow-button {
+    -fx-background-color: linear-gradient(to bottom, #7c3aed, #a78bfa);
+}
+
+.dialog-tag-combo-dark .list-cell {
+    -fx-background-color: #1A1A30;
+    -fx-text-fill: #E8E8F0;
+}
+
+.dialog-tag-combo-dark .list-cell:hover {
+    -fx-background-color: #2D2650;
+    -fx-text-fill: #c4b5fd;
+}
+
+/* ============================================
+   DIALOG - CONTENT TEXT AREA
+   Unique writing area with accent stripe
+   ============================================ */
+.dialog-content-area {
+    -fx-background-color: #F9FAFB;
+    -fx-control-inner-background: #F9FAFB;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 12 12 0;
+    -fx-text-fill: #1A1A2E;
+    -fx-font-size: 14px;
+    -fx-border-width: 0 0 0 4;
+    -fx-border-color: #667eea;
+    -fx-border-radius: 0 12 12 0;
+    -fx-padding: 4;
+    -fx-prompt-text-fill: #B0B0C0;
+    -fx-highlight-fill: #667eea;
+    -fx-highlight-text-fill: white;
+}
+
+.dialog-content-area .content {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 0 12 12 0;
+    -fx-padding: 10 14;
+}
+
+.dialog-content-area:focused {
+    -fx-border-color: #764ba2;
+    -fx-effect: dropshadow(gaussian, rgba(102, 126, 234, 0.15), 12, 0, 0, 0);
+}
+
+.dialog-content-area .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.dialog-content-area .scroll-pane>.viewport {
+    -fx-background-color: transparent;
+}
+
+.dialog-content-area .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.dialog-content-area .scroll-bar .thumb {
+    -fx-background-color: #C0C0D0;
+    -fx-background-radius: 4;
+}
+
+/* --- Dark mode --- */
+.dialog-content-area-dark {
+    -fx-background-color: #14142A;
+    -fx-control-inner-background: #14142A;
+    -fx-text-fill: #E8E8F0;
+    -fx-border-color: #7c3aed;
+    -fx-prompt-text-fill: #555570;
+    -fx-highlight-fill: #7c3aed;
+    -fx-highlight-text-fill: white;
+}
+
+.dialog-content-area-dark .content {
+    -fx-background-color: #14142A;
+}
+
+.dialog-content-area-dark:focused {
+    -fx-border-color: #a78bfa;
+    -fx-effect: dropshadow(gaussian, rgba(167, 139, 250, 0.2), 12, 0, 0, 0);
+}
+
+.dialog-content-area-dark .scroll-bar .thumb {
+    -fx-background-color: #3A3A55;
+}
